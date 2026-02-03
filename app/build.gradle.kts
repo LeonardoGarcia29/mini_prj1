@@ -3,6 +3,10 @@ plugins {
 }
 
 android {
+    buildFeatures{
+        viewBinding = true
+    }
+
     namespace = "com.example.project1leonardogarcia"
     compileSdk {
         version = release(36)
