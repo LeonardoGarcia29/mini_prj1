@@ -8,36 +8,40 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/promptText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="268dp"
+        android:layout_marginStart=""
         android:text="@string/prompt"
+        android:labelFor="@id/input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
+        android:id="@+id/input"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="184dp"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="numberDecimal"
         android:text="Name"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        android:autofillHints=""
+        app:layout_constraintBottom_toBottomOf="@+id/promptText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.393" />
+        app:layout_constraintTop_toTopOf="@+id/promptText"
+        app:layout_constraintVertical_bias="0.461" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/rateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="12dp"
+        android:text="@string/default_rate"
+        app:layout_constraintEnd_toEndOf="@+id/promptText"
+        app:layout_constraintTop_toBottomOf="@+id/promptText" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -46,20 +50,22 @@
         tools:layout_editor_absoluteY="412dp" />
 
     <RadioButton
-        android:id="@+id/radioButton2"
+        android:id="@+id/r20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RadioButton"
-        tools:layout_editor_absoluteX="53dp"
+        android:layout_marginStart="52dp"
+        android:checked="true"
+        android:text="@string/_15_years"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="323dp" />
 
     <RadioButton
         android:id="@+id/radioButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RadioButton"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="463dp" />
+        android:text="@string/_30_years"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="419dp" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -68,42 +74,68 @@
         tools:layout_editor_absoluteY="423dp" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/Calc"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="678dp" />
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="603dp" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="370dp"
-        tools:layout_editor_absoluteY="678dp" />
+        android:text="@string/Uninstall"
+        android:background="@drawable/my_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="555dp" />
 
     <RadioButton
         android:id="@+id/radioButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RadioButton"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="403dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="269dp"
-        tools:layout_editor_absoluteY="820dp" />
+        android:layout_marginStart="48dp"
+        android:text="@string/_20_years"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="371dp" />
 
     <SeekBar
         android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:progress="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/rateText"
+        tools:layout_editor_absoluteY="225dp" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="389dp"
-        tools:layout_editor_absoluteY="214dp" />
+        android:text="@string/Laon_Term"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="287dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/taxes_and_insurance1"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="492dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/monthly_payments"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="673dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

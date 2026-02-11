@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Mortgage Calculator by Leonardo Garcia</string>
     <string name="prompt">Enter Principle($)</string>
+    <string name="default_rate">Interest Rate: 10%</string>
+    <string name="Laon_Term">Select Laon Term</string>
+    <string name="_15_years">_15_years</string>
+    <string name="_20_years">20 years</string>
+    <string name="_30_years">30 years</string>
+    <string name="taxes_and_insurance1">Include Taxes and insurance (0.1%)</string>
+    <string name="Uninstall">Uninstall</string>
+    <string name="calculate">Calculate</string>
+    <string name="monthly_payments">Press calculat for monthly payments</string>
+    <string name="interest_rate">Interest Rate: %.1f%%</string>
 </resources>
