@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         binding.seekBar.setOnSeekBarChangeListener((SeekBarListener)
-                (SeekBar seekBar,int progress, boolean fromUser) ->
+                (SeekBar seekBar,int progress,  boolean fromUser) ->
                 {
 
                     binding.rateText.setText(String.format(getString(R.string.interest_rate), progress /10.0));
