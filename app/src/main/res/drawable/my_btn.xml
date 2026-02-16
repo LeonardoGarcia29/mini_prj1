@@ -4,6 +4,9 @@
         <shape android:shape="oval"/>
     </item>
     <item>
-        <shape android:shape="rectangle"/>
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp"/>
+        </shape>
+
     </item>
 </selector>

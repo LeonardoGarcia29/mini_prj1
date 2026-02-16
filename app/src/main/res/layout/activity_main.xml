@@ -11,11 +11,10 @@
         android:id="@+id/promptText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="268dp"
-        android:layout_marginStart="20dp"
-        android:text="@string/prompt"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="284dp"
         android:labelFor="@id/input"
+        android:text="@string/prompt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,116 +25,120 @@
         android:layout_marginStart="184dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text="Name"
+        android:text=""
         android:autofillHints=""
         app:layout_constraintBottom_toBottomOf="@+id/promptText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/promptText"
         app:layout_constraintVertical_bias="0.461" />
 
+
     <TextView
         android:id="@+id/rateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginTop="88dp"
         android:text="@string/default_rate"
-        app:layout_constraintEnd_toEndOf="@+id/promptText"
+        app:layout_constraintStart_toStartOf="@+id/promptText"
         app:layout_constraintTop_toBottomOf="@+id/promptText" />
 
     <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="210dp"
-        tools:layout_editor_absoluteY="412dp" />
+        android:id="@+id/radioGroup"
+        android:layout_width="138dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
-    <RadioButton
-        android:id="@+id/r15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:checked="true"
-        android:text="@string/_15_years"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="323dp" />
+        <RadioButton
+            android:id="@+id/r15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/_15_years"
+            tools:layout_editor_absoluteY="323dp" />
 
-    <RadioButton
-        android:id="@+id/r30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/_30_years"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="419dp" />
+        <RadioButton
+            android:id="@+id/r30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_30_years"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="419dp" />
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="178dp"
-        tools:layout_editor_absoluteY="423dp" />
+        <RadioButton
+            android:id="@+id/r20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_20_years"
+            tools:layout_editor_absoluteY="371dp" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/Calc"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="160dp"
+        android:background="@drawable/my_btn"
         android:text="@string/calculate"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="603dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="@string/Uninstall"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="156dp"
         android:background="@drawable/my_btn"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/Uninstall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Calc"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="555dp" />
-
-    <RadioButton
-        android:id="@+id/r20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:text="@string/_20_years"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="371dp" />
+        app:layout_constraintStart_toStartOf="@+id/checkBox" />
 
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="244dp"
         android:max="200"
         android:progress="100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/rateText"
-        tools:layout_editor_absoluteY="225dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
         android:text="@string/Laon_Term"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="287dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
         android:text="@string/taxes_and_insurance1"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="492dp" />
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="100dp"
         android:text="@string/monthly_payments"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="673dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/checkBox" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
