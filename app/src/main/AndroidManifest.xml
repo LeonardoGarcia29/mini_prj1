@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    //Add the uninstall code
+    <uses-permission
+        android:name="android.permission.REQUEST_DELETE_PACKAGES" />
 
     <application
         android:allowBackup="true"

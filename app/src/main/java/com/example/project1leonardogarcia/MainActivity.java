@@ -1,6 +1,8 @@
 package com.example.project1leonardogarcia;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.SeekBar;
@@ -42,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    private boolean unsintall(){
+        Intent delete = new Intent(Intent.ACTION_DELETE,
+                Uri.parse("package:" + getPackageName()));
+        startActivity(delete);
+    }
+
 
     private void calculate (View view){
         String inputString = binding.input.getText().toString();
