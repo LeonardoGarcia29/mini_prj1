@@ -11,5 +11,5 @@
     <string name="calculate">Calculate</string>
     <string name="default_monthly_payments">Press Calculate for monthly payments</string>
     <string name="interest_rate">Interest Rate: %.1f%%</string>
-    <string name="monthly_payments">Monthly payments: $%.2f%%</string>
+    <string name="monthly_payments">Monthly payments: $%.2f</string>
 </resources>

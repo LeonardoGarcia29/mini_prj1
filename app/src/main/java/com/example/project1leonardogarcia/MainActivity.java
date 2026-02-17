@@ -40,15 +40,16 @@ public class MainActivity extends AppCompatActivity {
                     binding.rateText.setText(String.format(getString(R.string.interest_rate), progress /10.0));
                 });
         binding.Calc.setOnClickListener(this::calculate);
+        binding.uninstall.setOnClickListener(this::uninstall);
+
 
     }
 
-    private void uninstall(){
+    private void uninstall(View view){
         Intent delete = new Intent(Intent.ACTION_DELETE,
                 Uri.parse("package:" + getPackageName()));
         startActivity(delete);
     }
-
 
     private void calculate (View view){
         String inputString = binding.input.getText().toString();
@@ -73,8 +74,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean isValid(String input){
-        
-                  
+        if(input.isEmpty()){
+            binding.input.setError("A principle amount must be entered!");
+            binding.input.requestFocus();
+            return false;
+        }
+
+        if(!input.matches("^\\d+(\\.\\d{1,2})?$"))     {
+             binding.input.setError("Please enter a valid number. 2 decimal digits max");
+             binding.input.requestFocus();
+             return false;         
+        }
+
         return true;
     }
 }
