@@ -39,13 +39,11 @@ public class MainActivity extends AppCompatActivity {
                 {
                     binding.rateText.setText(String.format(getString(R.string.interest_rate), progress /10.0));
                 });
-        binding.Calc.setOnClickListener(v -> {
-
-        });
+        binding.Calc.setOnClickListener(this::calculate);
 
     }
 
-    private boolean unsintall(){
+    private void uninstall(){
         Intent delete = new Intent(Intent.ACTION_DELETE,
                 Uri.parse("package:" + getPackageName()));
         startActivity(delete);
@@ -62,17 +60,21 @@ public class MainActivity extends AppCompatActivity {
         double rate = binding.seekBar.getProgress() / 10.0;
         int  year = getYears();
         boolean withTax = binding.checkBox.isChecked();
-        //TODO: calculate result and update the result text
+        double result = Calculator.calculate(principle, rate, year, withTax);
+        binding.result.setText(String.format(getString(R.string.monthly_payments), result));
+
     }
 
     private int getYears(){
-    if(binding.r15.isChecked()) return 15;
-    else if(binding.r20.isChecked()) return 20;
-    else return 30;
+        if(binding.r15.isChecked()) return 15;
+        else if(binding.r20.isChecked()) return 20;
+        else return 30;
+
     }
 
     private boolean isValid(String input){
-        //TODO: check if the input string is valid
+        
+                  
         return true;
     }
 }

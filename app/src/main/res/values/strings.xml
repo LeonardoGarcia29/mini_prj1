@@ -9,6 +9,7 @@
     <string name="taxes_and_insurance1">Include Taxes and insurance (0.1%)</string>
     <string name="Uninstall">Uninstall</string>
     <string name="calculate">Calculate</string>
-    <string name="monthly_payments">Press calculat for monthly payments</string>
+    <string name="default_monthly_payments">Press Calculate for monthly payments</string>
     <string name="interest_rate">Interest Rate: %.1f%%</string>
+    <string name="monthly_payments">Monthly payments: $%.2f%%</string>
 </resources>
